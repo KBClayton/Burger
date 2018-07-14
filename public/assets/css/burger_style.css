@@ -1,15 +1,35 @@
 #body{
     background: lightblue;
+    align-content: center;
 
 }
 #pic{
     align-self: auto;
+    margin: 15px;
+    padding: 10px;
+    border: solid;
+    border-color: black;
 }
 #uneaten{
     width: 40%;
-    
+    margin: 15px;
+    padding:10px;
+    float: left;
 }
 #eaten{
     width: 40%;
-
+    margin: 15px;
+    padding:10px;
+    float: right;
+}
+#form{
+    clear: both;
+    margin: 15px;
+    padding:10px;
+}
+#form{
+    clear: both;
+    width: 40%;
+    margin: 15px;
+    padding:10px;
 }

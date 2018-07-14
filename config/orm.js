@@ -13,12 +13,14 @@ var orm = {
   },
   create: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
-
+    console.log("orm.js");
+    console.log(vals);
+    console.log(cols);
     queryString += " (";
     queryString += cols.toString();
     queryString += ") ";
-    queryString += "VALUES (";
-    queryString += printQuestionMarks(vals.length);
+    queryString += "VALUES (\"";
+    queryString += vals[0]+"\","+vals[1];
     queryString += ") ";
 
     console.log(queryString);
@@ -34,9 +36,9 @@ var orm = {
 
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
-
+    console.log(objColVals);
     queryString += " SET ";
-    queryString += objToSql(objColVals);
+    queryString += "eaten = true";
     queryString += " WHERE ";
     queryString += condition;
 

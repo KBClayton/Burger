@@ -8,7 +8,7 @@ $(function() {
       };
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
-        data: newSleepState
+        data: true
       }).then(
         function() {
           console.log(id+" has been eaten "+eat);
@@ -24,8 +24,11 @@ $(function() {
         name: $("#ca").val().trim(),
         eaten: false
       };
+      console.log("burger_page.js");
+      console.log(nburger);
+
   
-      $.ajax("/api/burger", {
+      $.ajax("/api/burgers", {
         type: "POST",
         data: nburger
       }).then(
@@ -39,7 +42,7 @@ $(function() {
     $(".endburger").on("click", function(event) {
       var id = $(this).data("id");
   
-      $.ajax("/api/burger/" + id, {
+      $.ajax("/api/burgers/" + id, {
         type: "DELETE"
       }).then(
         function() {
